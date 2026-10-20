@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f3eb" />
+    <meta name="description" content="A clear, easy-to-search directory of free campus support for students." />
+    <title>Campus Help Finder</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Campus Help Finder home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Campus <strong>Help Finder</strong></span>
+      </a>
+      <span class="header-note"><span class="status-dot" aria-hidden="true"></span> Here for your next step</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span> STUDENT SUPPORT DIRECTORY</p>
+          <h1 id="page-title">You don’t have to<br /><span>figure it out alone.</span></h1>
+          <p class="intro-text">Start with what you need. Find free support on campus, without the runaround.</p>
+        </div>
+        <aside class="reassurance" aria-label="A note about getting support">
+          <span class="reassurance-index">A good place to start</span>
+          <p>Whatever’s going on, there’s a place to begin.</p>
+          <span class="reassurance-line" aria-hidden="true"></span>
+        </aside>
+      </section>
+
+      <section class="directory" aria-labelledby="directory-title">
+        <div class="directory-heading">
+          <div>
+            <p class="eyebrow section-eyebrow">FIND YOUR NEXT STEP</p>
+            <h2 id="directory-title">What would help today?</h2>
+          </div>
+          <p class="result-count" id="result-count" aria-live="polite" aria-atomic="true">6 resources</p>
+        </div>
+
+        <form class="search-form" role="search" novalidate>
+          <label class="visually-hidden" for="resource-search">Search campus resources</label>
+          <span class="search-symbol" aria-hidden="true"></span>
+          <input id="resource-search" name="q" type="search" placeholder="Try “food”, “housing”, or “tutoring”" autocomplete="off" />
+          <kbd class="search-hint" aria-hidden="true">SEARCH</kbd>
+        </form>
+
+        <div class="resource-grid" id="resource-grid" aria-label="Campus support resources">
+          <article class="resource-card card-coral" data-search="food pantry groceries essentials nutrition">
+            <div class="card-topline"><span class="card-number">01</span><span class="card-marker" aria-hidden="true">✳</span></div>
+            <div class="card-content">
+              <h3>Food Pantry</h3>
+              <p>Pick up groceries and everyday essentials through your campus food pantry.</p>
+            </div>
+            <a class="learn-more" href="#resources" aria-label="Learn more about Food Pantry">Learn more <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="resource-card card-lilac" data-search="counseling mental health stress emotional wellbeing">
+            <div class="card-topline"><span class="card-number">02</span><span class="card-marker" aria-hidden="true">✳</span></div>
+            <div class="card-content">
+              <h3>Counseling</h3>
+              <p>Connect with support for stress, mental health, and difficult moments.</p>
+            </div>
+            <a class="learn-more" href="#resources" aria-label="Learn more about Counseling">Learn more <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="resource-card card-blue" data-search="tutoring coursework classes study academic">
+            <div class="card-topline"><span class="card-number">03</span><span class="card-marker" aria-hidden="true">✳</span></div>
+            <div class="card-content">
+              <h3>Tutoring</h3>
+              <p>Get help with coursework, study skills, and the subjects you’re working through.</p>
+            </div>
+            <a class="learn-more" href="#resources" aria-label="Learn more about Tutoring">Learn more <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="resource-card card-green" data-search="legal aid lawyer rights housing immigration advice">
+            <div class="card-topline"><span class="card-number">04</span><span class="card-marker" aria-hidden="true">✳</span></div>
+            <div class="card-content">
+              <h3>Legal Aid</h3>
+              <p>Talk with a legal professional about housing, immigration, and other concerns.</p>
+            </div>
+            <a class="learn-more" href="#resources" aria-label="Learn more about Legal Aid">Learn more <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="resource-card card-yellow" data-search="childcare child care family parenting daycare">
+            <div class="card-topline"><span class="card-number">05</span><span class="card-marker" aria-hidden="true">✳</span></div>
+            <div class="card-content">
+              <h3>Childcare</h3>
+              <p>Explore childcare options and family resources connected to campus.</p>
+            </div>
+            <a class="learn-more" href="#resources" aria-label="Learn more about Childcare">Learn more <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="resource-card card-peach" data-search="emergency housing shelter safe place homelessness">
+            <div class="card-topline"><span class="card-number">06</span><span class="card-marker" aria-hidden="true">✳</span></div>
+            <div class="card-content">
+              <h3>Emergency Housing</h3>
+              <p>Find urgent support if you need a safe place to stay.</p>
+            </div>
+            <a class="learn-more" href="#resources" aria-label="Learn more about Emergency Housing">Learn more <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-mark" aria-hidden="true">?</span>
+          <h3>No matches just yet</h3>
+          <p>Try another word, or clear your search to see all six resources.</p>
+          <button class="reset-search" id="reset-search" type="button">Clear search</button>
+        </div>
+      </section>
+
+      <section class="closing-note" aria-label="A reminder">
+        <span class="closing-mark" aria-hidden="true">✳</span>
+        <p>Asking for support is a strong first step.</p>
+        <span class="closing-caption">ONE STEP AT A TIME</span>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Campus Help Finder</span>
+      <span>Support is here when you need it.</span>
+    </footer>
+  </body>
+</html>
